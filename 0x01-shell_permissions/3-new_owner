@@ -1,10 +1,2 @@
-#!/bin/bash
+[ -e "hello" ] && sudo chown betty hello && echo "Owner of 'hello' file has been changed to 'betty'." || echo "The 'hello' file does not exist."
 
-# Check if the file exists
-if [ -e "hello" ]; then
-    # Change the owner to "betty"
-    sudo chown betty hello
-    echo "Owner of 'hello' file has been changed to 'betty'."
-else
-    echo "The 'hello' file does not exist."
-fi
